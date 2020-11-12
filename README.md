@@ -34,10 +34,22 @@ https://raw.githubusercontent.com/sballas8/PoetRNN/master/data/limericks.csv
 ## Models
 * 117M-Clean (Gwern Model): https://mega.nz/#!2PhghaZD!_IJPpErXIRIDwRI0ktq2UKUZClDEoY7z8UpF28_qme8
 
-* 117M-Clean-Lym (Experiment1 Model): TBD
+* 117M-Clean-Lym **Note**:Model is too large to store on github contact Mitch to share
   - Train time: 21hrs
   - Loss: 0.9
-
+  
+* 117M-AA: **Note**:Model is too large to store on github contact Mitch to share
+  - Train time: 40hrs
+  - Loss: 0.11
+  
+* 117M-AABB: **Note**:Model is too large to store on github contact Mitch to share
+  - Train time: 40hrs
+  - Loss: 0.1
+  
+* 117M-limerick **Note**:Model is too large to store on github contact Mitch to share
+  - Train time: 40hrs
+  - Loss: 0.26
+  
 ## Samples (Experiment1 Model) 
 1:
 
