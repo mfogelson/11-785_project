@@ -6,7 +6,7 @@ from typing import List, Union
 import numpy as np
 import pronouncing
 
-from .util import calculate_edit_distance, clean
+from youshen.util import calculate_edit_distance, clean
 
 
 class Limerick:
