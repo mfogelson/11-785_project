@@ -14,7 +14,8 @@ st.title("Youshen Poetry Generator")
 st.write("Poems you'll love by a friendly AI. ")  # description
 
 text_prompt = "My grandfather's clock was too large for the shelf"
-user_input = st.text_input("Starter text", text_prompt)
+user_input = ""
+# user_input = st.text_input("Starter text", text_prompt)
 
 if st.button("Predict burn area"):
     payload = dict()
