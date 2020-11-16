@@ -33,10 +33,7 @@ def calculate_edit_distance(phoneme_set_a: List[str], phoneme_set_b: List[str], 
     
     index_counter = 0
     while index_counter < len(phoneme_set_b) - 1:
-        if phoneme_set_a[index_counter] == aligned_phoneme_set_b[index_counter]:
-            continue
-            # aligned_phoneme_set_b[index_counter] = phoneme_set_b[index_counter]
-        elif index_counter > 0:
+        if index_counter > 0:
             if phoneme_set_a[index_counter-1] == aligned_phoneme_set_b[index_counter]:
                 aligned_phoneme_set_b.insert(index_counter, None)
         # else, skip. it requires a substitution
