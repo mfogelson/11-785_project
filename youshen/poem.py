@@ -127,7 +127,7 @@ def score_poems(file_path: Path, last_word_pattern:str, blacklist:List ):
     return poem_scores
 
 
-def test_scoring_limerick(sample_rhyme: Path):
+def test_scoring_limerick(sample_rhyme: Path, limerick_pattern: List):
     """Sanity check to test scoring of a single limerick
     """
     with open(sample_rhyme) as rhyme_sample:
