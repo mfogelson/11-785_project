@@ -17,7 +17,7 @@ text_prompt = "My grandfather's clock was too large for the shelf"
 user_input = ""
 # user_input = st.text_input("Starter text", text_prompt)
 
-if st.button("Predict burn area"):
+if st.button("Generate a poem"):
     payload = dict()
     payload["user_input"] = str(user_input)
 
