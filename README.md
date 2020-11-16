@@ -151,3 +151,38 @@ Processed Data Output:
 3. Change GPT2
     * Loss Function
     * NOTE: Cannot be done until non-human quantitative evaluation methods are made 
+    
+
+---
+### PS: Setting up HTTP Access on EC2 instances:
+
+Update:
+
+Alright, I just figured out that some steps were not needed at all. Should be really simple.
+
+Some details:
+
+1. Launch instances
+    * Amazon Linux 2 AMI (HVM), SSD Volume Type - ami-03657b56516ab7912 (64-bit x86) / ami-023b120e01f4779c1 (64-bit Arm)
+
+    (The first one in the free tier group)
+    
+    (Note that the username is ec2-user instead of ubuntu)
+        
+    (Not recommended because many libraries (including pip, flask) need manual installation)
+
+    (Install pip:)
+    ```
+    $ curl -O https://bootstrap.pypa.io/get-pip.py
+    $ python get-pip.py --user
+    ```
+    (Probably need to install python3 later for our project???)
+    
+2. On the Configure Security Group page
+    * Add Rule "Custom TCP Rule", where the Port Range must cover the port number used by our web app
+    * The source IP can be set to "0.0.0.0/0, ::/0" just for now
+
+3. In app.py
+    * The listening IP should be set to brodcast IP address, i.e. "0.0.0.0"
+
+
