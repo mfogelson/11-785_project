@@ -3,7 +3,7 @@ from typing import List
 
 from fastapi import FastAPI
 
-from .api_model import KeyGen
+from api.api_model import KeyGen
 
 app = FastAPI()
 model = None  # TODO: initialize some object that will serve as a wrapper for the model
