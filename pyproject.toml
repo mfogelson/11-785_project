@@ -12,6 +12,7 @@ pronouncing = "^0.2.0"
 numpy = "^1.19.4"
 
 [tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
