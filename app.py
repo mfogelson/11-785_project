@@ -7,16 +7,17 @@ import json
 import requests
 import streamlit as st
 
-base_url = "http://127.0.0.1:8080"
+base_url = "http://0.0.0.0:8080"
 generation_endpoint = "generate"
 
 st.title("Youshen Poetry Generator")
 st.write("Poems you'll love by a friendly AI. ")  # description
 
 text_prompt = "My grandfather's clock was too large for the shelf"
-user_input = st.text_input("Starter text", text_prompt)
+user_input = ""
+# user_input = st.text_input("Starter text", text_prompt)
 
-if st.button("Generate Poem"):
+if st.button("Generate a poem"):
     payload = dict()
     payload["user_input"] = str(user_input)
 
