@@ -8,6 +8,8 @@ import pronouncing
 
 from youshen.util import calculate_edit_distance, clean
 
+LIMERICK_PATTERN = [[0, 1], [2, 3], [0, 4]]
+
 
 class Limerick:
     def __init__(self, lines: str, rhyme_patterns: List, max_length: int = None):
@@ -113,15 +115,18 @@ def read_poems(file_path: Path, blacklist):
     with open(file_path) as file:
         text = file.read()
     poem_samples = text.split("<|endoftext|>")
-    poems = [clean(sample, blacklist) for sample in poem_samples if len(sample)>0]
-    return [poem for poem in poems if len(poem)>0]
+    poems = [clean(sample, blacklist) for sample in poem_samples if len(sample) > 0]
+    return [poem for poem in poems if len(poem) > 0]
 
 
-def score_poems(file_path: Path, last_word_pattern:str, blacklist:List ):
+def score_poems(file_path: Path, last_word_pattern: str, blacklist: List):
     """Reads limericks in generated samples and scores them between 0 and 1
     """
-    poems = [SamplePoem(text=poem_sample, rhyme_patterns=limerick_pattern, verse_length=5) 
-             for poem_sample in read_poems(file_path, blacklist=blacklist) if len(poem_sample) >0]
+    poems = [
+        SamplePoem(text=poem_sample, rhyme_patterns=limerick_pattern, verse_length=5)
+        for poem_sample in read_poems(file_path, blacklist=blacklist)
+        if len(poem_sample) > 0
+    ]
     poems = [poem for poem in poems if poem.lines]
     poem_scores = [poem.get_rhyme_score() for poem in poems]
     return poem_scores
@@ -133,8 +138,10 @@ def test_scoring_limerick(sample_rhyme: Path, limerick_pattern: List):
     with open(sample_rhyme) as rhyme_sample:
         sample_corpus = rhyme_sample.read()
     limerick_lines = [line for line in sample_corpus.splitlines() if line]
-    limerick = Limerick(lines=limerick_lines, rhyme_patterns=limerick_pattern, max_length=5)
+    limerick = Limerick(
+        lines=limerick_lines, rhyme_patterns=limerick_pattern, max_length=5
+    )
     print("Scoring limerick...")
     score = limerick.get_rhyme_score()
     print(f"Rhyme score is {score}")
-    assert(type(score) == float )
+    assert type(score) == float
