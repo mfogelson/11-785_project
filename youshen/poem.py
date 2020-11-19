@@ -127,7 +127,7 @@ def score_poems(file_path: Path, last_word_pattern: str, blacklist: List):
     """Reads limericks in generated samples and scores them between 0 and 1
     """
     poems = [
-        SamplePoem(text=poem_sample, rhyme_patterns=limerick_pattern, verse_length=5)
+        SamplePoem(text=poem_sample, rhyme_patterns=LIMERICK_PATTERN, verse_length=5)
         for poem_sample in read_poems(file_path, blacklist=blacklist)
         if len(poem_sample) > 0
     ]
