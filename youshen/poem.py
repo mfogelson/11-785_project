@@ -9,6 +9,10 @@ import pronouncing
 from youshen.util import calculate_edit_distance, clean
 
 LIMERICK_PATTERN = [[0, 1], [2, 3], [0, 4]]
+BLACKLIST =[
+    "=+.*=+",
+    "(<.endoftext)*.>"
+]
 
 
 class Limerick:
