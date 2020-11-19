@@ -94,6 +94,9 @@ class Limerick:
         """
         valid_patterns = self.__get_valid_rhyme_patterns()
         scores = [self.score(pattern) for pattern in valid_patterns]
+        if len(scores) == 0:
+            return 0
+            # pdb.set_trace()
         return sum(scores) / len(scores)
 
     def __repr__(self):
