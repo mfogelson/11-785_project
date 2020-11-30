@@ -36,6 +36,10 @@ Model Architecture:
   - We used the [GPT2 117M](https://github.com/nshepperd/gpt-2) architecture based off the code from [nshepperd](github.com/nshepperd) 
   - We trained on-top of a pretrained model that learned from [general poetry by gwern](https://www.gwern.net/GPT-2) < Insert Reference >
   
+Hardware: 
+
+ - We trained the model on an NVIDIA Tesla V100
+  
 Data Base: 
 
   - We used a corpus of [~90,000 Limericks](https://raw.githubusercontent.com/sballas8/PoetRNN/master/data/limericks.csv) thanks to [sballas8](github.com/sballas8)
@@ -46,6 +50,11 @@ Preprocessing:
   - We converted all numbers to text
   - We removed all poems that did not conform to the structure above
   - We added <|endoftext|> token to end of each poem
+  
+Training Time: 
+
+ - The model was trained on 24 GPU hrs 
+ - The final loss was ~0.90
 
 Evaluation Metrics: 
 
