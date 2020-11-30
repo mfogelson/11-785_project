@@ -19,17 +19,7 @@ Goals:
 Constraints: 
 
  - We decided to constrain the problem to the poetry form of [**Lymericks.**](https://en.wikipedia.org/wiki/Limerick_(poetry))
- - Limericks are rhyming poems of the form:
- 
- A
- 
- A
- 
- B
- 
- B
- 
- A
+ - Limericks are rhyming poems of the form: **AABBA**
  
 Model Architecture: 
 
