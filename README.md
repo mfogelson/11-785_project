@@ -22,6 +22,10 @@
 * Cole Peterson Master's Thesis: https://dspace.library.uvic.ca/bitstream/handle/1828/10801/Peterson_Cole_MSc_2019.pdf?sequence=3&isAllowed=y#Hfootnote.12
   - Useful information about poetry datasets
   - Other methods for learning Poetry 
+  
+* Ng Wai Foong's Medium Article: https://medium.com/ai-innovation/beginners-guide-to-retrain-gpt-2-117m-to-generate-custom-text-content-8bb5363d8b7f
+  - Step by step for learning how to train GPT2 Model
+  
 
 ## Data
 * Raw Lymeric Data
