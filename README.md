@@ -198,6 +198,15 @@ Processed Data Output:
 
 - rhyming_evaluation.ipynb -> Jupyter Notebook to evaluate output samples Rhyming Success
 
+## Setting up
+### Dowloading data files required to run the app/notebook experiments
+Step 1: Create .env file with required variables. See the .env.sample template for pointers
+AWS credentials will be on our slack. Will add a script for public download later on.
+Step 2: Run the setup script
+```bash
+bash setup.sh
+``` 
+
 
 ## How to move forward?
 

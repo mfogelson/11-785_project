@@ -1,4 +1,9 @@
 fastapi
 numpy
-pronoucing
+pronouncing
 streamlit
+numpy==1.19.4
+emails==0.6
+boto3==1.16.26
+python-dotenv==0.15.0
+fire==0.3.1

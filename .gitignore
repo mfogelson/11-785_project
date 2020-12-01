@@ -130,3 +130,11 @@ dmypy.json
 
 #tmp project subfolders
 */.tmp/
+
+# ignore data folders uploaded to s3
+corpuses
+run1
+samples
+
+# ignore vscode settings
+.vscode
