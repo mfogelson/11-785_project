@@ -130,3 +130,6 @@ dmypy.json
 
 #tmp project subfolders
 */.tmp/
+
+# ignore vscode settings
+.vscode
