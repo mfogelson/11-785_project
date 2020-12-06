@@ -1,35 +1,96 @@
 # 11-785_project
-11-785 Group Project: YouShen Poetry generation
+
+Authors:
+* [Mitchell Fogelson](mitchellfogelson.com)
+* Chris Dare
+* Xinkai Chen 
+* Tony Dong
+
+Date: 11-30-2020
+
+Description: 
+
+- This project was a course project for [Introduction to Deep Learning 11-785](http://deeplearning.cs.cmu.edu/) course at CMU Fall 2020. 
+
+Goals: 
+
+- The goal of this project was to create a novel poetry generation Deep Learning Model.
+
+Constraints: 
+
+ - We decided to constrain the problem to the poetry form of [**Lymericks.**](https://en.wikipedia.org/wiki/Limerick_(poetry))
+ - Limericks are rhyming poems of the form: **AABBA**
+ 
+Model Architecture: 
+
+  - We used the [GPT2 117M](https://github.com/nshepperd/gpt-2) architecture based off the code from [nshepperd](github.com/nshepperd) 
+  - We trained on-top of a pretrained model that learned from [general poetry by gwern](https://www.gwern.net/GPT-2) < Insert Reference >
+  
+Hardware: 
+
+ - We trained the model on an NVIDIA Tesla V100
+  
+Data Base: 
+
+  - We used a corpus of [~90,000 Limericks](https://raw.githubusercontent.com/sballas8/PoetRNN/master/data/limericks.csv) thanks to [sballas8](github.com/sballas8)
+  
+Preprocessing: 
+
+  - We removed all punctuation
+  - We converted all numbers to text
+  - We removed all poems that did not conform to the structure above
+  - We added <|endoftext|> token to end of each poem
+  
+Training Time: 
+
+ - The model was trained on 24 GPU hrs 
+ - The final loss was ~0.90
+
+Evaluation Metrics: 
+
+  - We implemented a Rhyming evaluation  
+  - We implemented a Coreference evaluation 
+  - We implemented a Nonsense word evaluation
+  - We also set up a website HERE where we had human's evaluate poems generated from our model vs. from the training dataset
+    - This is the best way we can evaluate the success of our system 
+
+Downsampling: 
+
+  - From 8000 unconditionally generated poems 1000 were scored well enough to pass the 3 metrics described above and used for user testing
+  
+ 
 
 ## Deliverables
-* Project Proposal: https://www.overleaf.com/2953816942chzfyjrhfknh
+* [Project Proposal](https://www.overleaf.com/2953816942chzfyjrhfknh)
 
-* Midterm Report (Due 10-10-20): https://www.overleaf.com/2483957362fmgtfyvrxvpv
-  - Instuctions: https://piazza.com/class/k9lk3ucwopisb?cid=1426
+* [Midterm Report](https://www.overleaf.com/2483957362fmgtfyvrxvpv)
 
-* Final Report (Due 11-27-20): TBD
+* Final Report (Due 12-8-20): TBD
 
 ## Key Resources
-* Gwern Blog Poetry Learning with GPT2: https://www.gwern.net/GPT-2
+* [Gwern Blog Poetry Learning with GPT2:](https://www.gwern.net/GPT-2)
   - Teaches how to run GPT2 
   - Suggestions for improvements
   - Experiments 
 
-* Nshepperd/gpt-2 Github: https://github.com/nshepperd/gpt-2
+* [Nshepperd/gpt-2 Github:](https://github.com/nshepperd/gpt-2)
   - Good documentation for running GPT2
   - How GPT2 Works
 
-* Cole Peterson Master's Thesis: https://dspace.library.uvic.ca/bitstream/handle/1828/10801/Peterson_Cole_MSc_2019.pdf?sequence=3&isAllowed=y#Hfootnote.12
+* [Cole Peterson Master's Thesis:](https://dspace.library.uvic.ca/bitstream/handle/1828/10801/Peterson_Cole_MSc_2019.pdf?sequence=3&isAllowed=y#Hfootnote.12)
   - Useful information about poetry datasets
   - Other methods for learning Poetry 
+  
+* [Ng Wai Foong's Medium Article:](https://medium.com/ai-innovation/beginners-guide-to-retrain-gpt-2-117m-to-generate-custom-text-content-8bb5363d8b7f)
+  - Step by step for learning how to train GPT2 Model
+  
 
 ## Data
-* Raw Lymeric Data
-https://raw.githubusercontent.com/sballas8/PoetRNN/master/data/limericks.csv
+* [Raw Lymeric Data](https://raw.githubusercontent.com/sballas8/PoetRNN/master/data/limericks.csv)
 
-* cleaned Project Gutenberg samples (Gwern): https://www.gwern.net/docs/ai/2019-10-17-117m-poetry-cleanprojectgutenberg-samples.txt
+* [cleaned Project Gutenberg samples](https://www.gwern.net/docs/ai/2019-10-17-117m-poetry-cleanprojectgutenberg-samples.txt)
 
-* Poetry Foundation-finetuned samples (Gwern): https://www.gwern.net/docs/ai/2019-10-19-117m-poetryfoundation-samples.txt
+* [Poetry Foundation-finetuned samples](https://www.gwern.net/docs/ai/2019-10-19-117m-poetryfoundation-samples.txt)
 
 ## Models
 * 117M-Clean (Gwern Model): https://mega.nz/#!2PhghaZD!_IJPpErXIRIDwRI0ktq2UKUZClDEoY7z8UpF28_qme8
@@ -136,6 +197,15 @@ Processed Data Output:
 - preprocesser.ipynb -> Jupyter Notebook for preprocessing raw data
 
 - rhyming_evaluation.ipynb -> Jupyter Notebook to evaluate output samples Rhyming Success
+
+## Setting up
+### Dowloading data files required to run the app/notebook experiments
+Step 1: Create .env file with required variables. See the .env.sample template for pointers
+AWS credentials will be on our slack. Will add a script for public download later on.
+Step 2: Run the setup script
+```bash
+bash setup.sh
+``` 
 
 
 ## How to move forward?
