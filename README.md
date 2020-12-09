@@ -24,7 +24,7 @@ Constraints:
 Model Architecture: 
 
   - We used the [GPT2 117M](https://github.com/nshepperd/gpt-2) architecture based off the code from [nshepperd](github.com/nshepperd) 
-  - We trained on-top of a pretrained model that learned from [general poetry by gwern](https://www.gwern.net/GPT-2) < Insert Reference >
+  - We trained on-top of a pretrained model that learned from [general poetry by gwern](https://www.gwern.net/GPT-2)
   
 Hardware: 
 
