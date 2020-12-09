@@ -51,7 +51,7 @@ Evaluation Metrics:
   - We implemented a Rhyming evaluation  
   - We implemented a Coreference evaluation 
   - We implemented a Nonsense word evaluation
-  - We also set up a website HERE where we had human's evaluate poems generated from our model vs. from the training dataset
+  - We also set up a website [HERE](http://18.191.42.93:8501/) where we had human's evaluate poems generated from our model vs. from the training dataset
     - This is the best way we can evaluate the success of our system 
 
 Downsampling: 
