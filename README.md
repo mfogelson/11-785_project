@@ -61,11 +61,11 @@ Downsampling:
  
 
 ## Deliverables
-* [Project Proposal](https://www.overleaf.com/2953816942chzfyjrhfknh)
+* [Project Proposal](https://www.overleaf.com/read/fxyxwwjksxkr)
 
-* [Midterm Report](https://www.overleaf.com/2483957362fmgtfyvrxvpv)
+* [Midterm Report](https://www.overleaf.com/read/yvmdgcxrgzjz)
 
-* Final Report (Due 12-8-20): TBD
+* [Final Report](https://www.overleaf.com/read/zkjkhjdttgtx)
 
 ## Key Resources
 * [Gwern Blog Poetry Learning with GPT2:](https://www.gwern.net/GPT-2)
@@ -97,7 +97,7 @@ Downsampling:
 
 * 117M-Clean-Lym **Note**:Model is too large to store on github contact Mitch to share
   - Train time: 21hrs
-  - Loss: 0.9
+  - Loss: 0.09
   
 * 117M-AA: **Note**:Model is too large to store on github contact Mitch to share
   - Train time: 40hrs
