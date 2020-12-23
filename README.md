@@ -1,9 +1,9 @@
 # 11-785_project
 
 Authors:
-* [Mitchell Fogelson](mitchellfogelson.com)
+* [Mitchell Fogelson](http://www.mitchellfogelson.com/)
 * Chris Dare
-* Xinkai Chen 
+* [Xinkai Chen](https://xinkaichen.me/) 
 * Tony Dong
 
 Date: 11-30-2020
@@ -18,7 +18,7 @@ Goals:
 
 Constraints: 
 
- - We decided to constrain the problem to the poetry form of [**Lymericks.**](https://en.wikipedia.org/wiki/Limerick_(poetry))
+ - We decided to constrain the problem to the poetry form of [**Limericks.**](https://en.wikipedia.org/wiki/Limerick_(poetry))
  - Limericks are rhyming poems of the form: **AABBA**
  
 Model Architecture: 
